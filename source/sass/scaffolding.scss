@@ -1,0 +1,12 @@
+body {
+  font-style: normal;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #444444;
+
+  @include indent-reset;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

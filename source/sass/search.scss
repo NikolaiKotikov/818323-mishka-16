@@ -1,0 +1,11 @@
+.search__field {
+  border: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+
+  &::placeholder {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+  }
+}
