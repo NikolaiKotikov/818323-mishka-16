@@ -1,0 +1,16 @@
+.site-nav__list {
+  @include list-reset;
+}
+
+.site-nav__link {
+  @include link-reset;
+  color: #ffffff;
+}
+
+.site-nav__link--bg-light {
+  background-color: #63d1bb;
+}
+
+.site-nav__link--bg-dark {
+  background-color: #56c3b2;
+}

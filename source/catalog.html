@@ -4,22 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка-каталог</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <a class="header__logo logo">
-      <img class="logo__image" src="http://placehold.it/150x100" width="150" height="100"
-        alt="Интернет-магазин «Мишка»">
+    <a class="header__logo logo" href="index.html">
+      <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
     </a>
     <nav class="header__nav nav">
       <button class="nav__toggle" type="button">Открыть меню</button>
       <ul class="nav__list site">
         <li class="site__item">
-          <a class="site__link">Каталог товаров</a>
+          <a class="site__link menu-link">Каталог товаров</a>
         </li>
         <li class="site__item">
-          <a class="site__link" href="#">Вязание на заказ</a>
+          <a class="site__link menu-link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="nav__list user">
@@ -31,14 +31,15 @@
           </form>
         </li>
         <li class="user__item">
-          <a class="user__link cart-button" href="#">Корзина: пока пуста</a>
+          <a class="user__link cart-button menu-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
   </header>
-
   <main>
-    <h1>Каталог товаров</h1>
+    <div class="headline">
+      <h1 class="title title--l">Каталог товаров</h1>
+    </div>
     <ul class="catalog">
       <li class="catalog__item">
         <article class="catalog__product product">
@@ -46,7 +47,7 @@
             <img class="product__image" src="http://placehold.it/150x100" width="150" height="100"
               alt="Изображение зайчика">
           </a>
-          <a href="#">
+          <a class="product__link" href="#">
             <h2 class="product__title">Зайчик-попрыгайчик</h2>
           </a>
           <p class="product__description">
@@ -54,17 +55,17 @@
           </p>
           <p class="product__price">
             <span class="product__price-text">1 200 руб.</span>
-            <button class="product__button cart-button" href="#">В корзину</button>
+            <a class="product__button cart-button" href="order-form.html">В корзину</a>
           </p>
         </article>
       </li>
       <li class="catalog__item">
         <article class="catalog__product product">
-          <a href="#">
+          <a class="catalog__link" href="#">
             <img class="product__image" src="http://placehold.it/150x100" width="150" height="100"
               alt="Изображение корзинки для белья">
           </a>
-          <a href="#">
+          <a class="product__link" href="#">
             <h2 class="product__title">Корзинка для белья</h2>
           </a>
           <p class="product__description">
@@ -72,17 +73,17 @@
           </p>
           <p class="product__price">
             <span class="product__price-text">690 руб.</span>
-            <button class="product__button cart-button" href="#">В корзину</button>
+            <a class="product__button cart-button" href="order-form.html">В корзину</a>
           </p>
         </article>
       </li>
       <li class="catalog__item">
         <article class="catalog__product product">
-          <a href="#">
+          <a class="catalog__link" href="#">
             <img class="product__image" src="http://placehold.it/150x100" width="150" height="100"
               alt="Изображение корзинки для игрушек">
           </a>
-          <a href="#">
+          <a class="product__link" href="#">
             <h2 class="product__title">Большая корзинка для игрушек</h2>
           </a>
           <p class="product__description">
@@ -90,7 +91,7 @@
           </p>
           <p class="product__price">
             <span class="product__price-text">1 500 руб.</span>
-            <button class="product__button cart-button" href="#">В корзину</button>
+            <a class="product__button cart-button" href="order-form.html">В корзину</a>
           </p>
         </article>
       </li>
@@ -107,7 +108,7 @@
       <p class="manufacturing__text">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
       </p>
-      <button class="video__button button" type="button">Сделать заказ</button>
+      <a class="video__button button" href="form.html">Сделать заказ</a>
     </section>
   </main>
 
@@ -124,9 +125,9 @@
       </li>
     </ul>
     <p class="footer__copyright copyright">
-      <span class="copyright__title">Разработано:</span>
+      <span class="copyright__title">Разработано</span>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
+        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </p>
   </footer>

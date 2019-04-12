@@ -1,0 +1,15 @@
+.title {
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+
+  @include indent-reset;
+}
+
+.title--l {
+  font-size: 27px;
+}
+
+.title--m {
+  font-size: 25px;
+}
