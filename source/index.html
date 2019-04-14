@@ -3,43 +3,58 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <a class="header__logo logo">
-      <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-    </a>
-    <nav class="header__nav nav">
-      <button class="nav__toggle" type="button">Открыть меню</button>
-      <ul class="nav__list site">
-        <li class="site__item">
+    <div class="header__wrapper">
+      <div class="header__item header__logo-wrapper">
+        <a class="header__logo logo">
+          <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+        <button class="menu-button" type="button">Открыть меню</button>
+      </div>
+      <ul class="header__list header__list-site--order-change site">
+        <li class="site__item header__item">
           <a class="site__link menu-link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="site__item">
+        <li class="site__item header__item">
           <a class="site__link menu-link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
-      <ul class="nav__list user">
-        <li class="user__item">
+      <ul class="header__list header__list-user--order-change user">
+        <li class="user__item header__item">
           <form class="user__search search" action="https://echo.htmlacademy.ru" method="get">
             <input class="search__field" type="search" name="search__field" placeholder="Поиск по сайту"
               aria-label="Поиск по сайту">
             <button class="search__button" type="button">Найти!</button>
           </form>
         </li>
-        <li class="user__item">
+        <li class="user__item header__item">
           <a class="user__link cart-button menu-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
-    </nav>
+      <ul class="header__list header-promo">
+        <li class="header-promo__new">
+          <a class="menu-link menu-link--s" href="#">Новые поступления</a>
+        </li>
+        <li class="header-promo__sale">
+          <a class="menu-link menu-link--s" href="#">Распродажа</a>
+        </li>
+        <li class="header-promo__delivery">
+          <p class="header-promo__text">Бесплатная доставка по России</p>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <main>
     <div class="headline">
-      <h1 class="title title--l">Милые штуки ручной работы для дома</h1>
+      <h1 class="headline__title title title--l">Милые штуки ручной работы для дома</h1>
     </div>
     <nav class="site-nav">
       <ul class="site-nav__list">
@@ -51,8 +66,11 @@
       </ul>
     </nav>
     <article class="special">
-      <h2 class="special__title">Товар недели</h2>
-      <h3 class="special__product-title title title--m">Вязаные корзинки</h3>
+      <div class="special__title-wrapper">
+        <h3 class="special__product-title title title--m">Вязаные корзинки</h3>
+        <h2 class="special__title">Товар недели</h2>
+      </div>
+      <div class="special__content-wrapper">
       <p class="special__description">
         Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
       </p>
@@ -70,11 +88,11 @@
           <td class="table-data">15 см</td>
         </tr>
       </table>
-      <img class="special__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315"
-        alt="Изображение вязаных корзинок">
       <p class="special__price">Цена: 990 руб.</p>
       <a class="special__button button" href="order-form.html">Заказать</a>
+    </div>
     </article>
+    <!--
     <section class="about-us">
       <h2 class="title title--m">Коротко о нас:</h2>
       <ul class="about-us__list">
@@ -143,7 +161,7 @@
         <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </p>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

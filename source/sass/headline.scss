@@ -1,3 +1,18 @@
-.headline {
+.headline__title {
+  @include mobile-wrapper;
   background-color: #f1f1f1;
+  min-height: 280px; // Временно для задания
+}
+
+@media (min-width: $tablet-width) {
+  .headline__title {
+    @include tablet-wrapper;
+    min-height: 525px; // Временно для задания
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .headline__title {
+    @include desktop-wrapper;
+  }
 }

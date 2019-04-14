@@ -13,3 +13,17 @@
 .title--m {
   font-size: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .title--l {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title--l {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
