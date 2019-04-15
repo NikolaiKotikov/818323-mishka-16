@@ -1,0 +1,43 @@
+.header__wrapper {
+  @include mobile-wrapper;
+}
+// Временно для задания
+.header__item {
+  min-height: 79px;
+}
+
+@media (min-width: $tablet-width) {
+  .header__wrapper {
+    @include tablet-wrapper;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__logo-wrapper {
+    order: -10;
+    min-width: 320px; // Временно для задания
+  }
+
+  .header__list {
+    display: flex;
+    max-width: 320px; // Временно для задания
+  }
+
+  .header__list-user--order-change {
+    order: -9;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .header__list-site--order-change {
+    order: -10;
+  }
+
+  .header__logo-wrapper {
+    order: -9;
+  }
+}

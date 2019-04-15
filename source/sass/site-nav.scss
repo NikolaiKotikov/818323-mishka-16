@@ -1,5 +1,7 @@
 .site-nav__list {
   @include list-reset;
+  @include mobile-wrapper;
+  min-height: 205px; // Временно для задания
 }
 
 .site-nav__link {
@@ -13,4 +15,17 @@
 
 .site-nav__link--bg-dark {
   background-color: #56c3b2;
+}
+
+@media (min-width: $tablet-width) {
+  .site-nav__list {
+    @include tablet-wrapper;
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-nav__list {
+    @include desktop-wrapper;
+  }
 }

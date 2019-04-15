@@ -20,3 +20,46 @@
   font-size: 17px;
   line-height: 24px;
 }
+
+.special__title-wrapper {
+  @include mobile-wrapper;
+}
+
+.special__content-wrapper {
+  @include mobile-wrapper;
+}
+
+@media (min-width: $tablet-width) {
+  .special__title-wrapper {
+    @include tablet-wrapper;
+    display: flex;
+  }
+
+  .special__description {
+    width: 300px; // Временно для задания
+  }
+
+  .special__content-wrapper {
+    @include tablet-wrapper;
+  }
+
+  .special__product-title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special__title-wrapper {
+    @include desktop-wrapper;
+  }
+
+  .special__title {
+    order: -10;
+  }
+
+  .special__product-title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
