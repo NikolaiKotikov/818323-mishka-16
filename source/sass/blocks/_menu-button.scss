@@ -1,0 +1,20 @@
+.menu-button {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--close {
+    background-image: url("../img/icon-menu-close.svg");
+  }
+
+  &--open {
+    background-image: url("../img/icon-menu-open.svg");
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @include bp($tablet-width) {
+    display: none;
+  }
+}

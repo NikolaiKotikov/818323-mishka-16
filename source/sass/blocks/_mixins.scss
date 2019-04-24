@@ -1,0 +1,106 @@
+//сброс стилей по умолчанию
+@mixin list-reset {
+  list-style: none;
+
+  @include indent-reset;
+}
+
+@mixin indent-reset {
+  margin: 0;
+  padding: 0;
+}
+
+//позиционирование и выравнивание
+@mixin y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//поведение при взаимодействии
+@mixin link-state($color-group) {
+  color: map-get($color-group, primary);
+
+  &:hover,
+  &:focus {
+    color: map-get($color-group, hover);
+  }
+
+  &:active {
+    color: map-get($color-group, active);
+  }
+}
+
+@mixin icon-state($color-group, $selector) {
+  #{$selector} {
+    fill: map-get($color-group, primary);
+  }
+
+  &:hover,
+  &:focus {
+    #{$selector} {
+      fill: map-get($color-group, hover);
+    }
+  }
+
+  &:active {
+    #{$selector} {
+      fill: map-get($color-group, active);
+    }
+  }
+}
+
+//адаптивность
+@mixin bp($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin pseudo ($option) {
+  &::#{$option} {
+    position: absolute;
+    content: "";
+
+    @content;
+  }
+}
+
+//на удаление
+@mixin link-reset {
+  text-decoration: none;
+}
+
+@mixin mobile-wrapper {
+  width: $mobile-width - $mobile-padding-l - $mobile-padding-r;
+  padding-left: $mobile-padding-l;
+  padding-right: $mobile-padding-r;
+  margin: $auto-center;
+}
+
+@mixin tablet-wrapper {
+  width: $tablet-width - $tablet-padding-l - $tablet-padding-r;
+  padding-left: $tablet-padding-l;
+  padding-right: $tablet-padding-r;
+  margin: $auto-center;
+}
+
+@mixin desktop-wrapper {
+  width: $desktop-width - $desktop-padding-l - $desktop-padding-r;
+  padding-left: $desktop-padding-l;
+  padding-right: $desktop-padding-r;
+  margin: $auto-center;
+}

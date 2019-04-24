@@ -1,0 +1,26 @@
+//точки перестроения
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+
+//цвета
+$link-colors: (
+  primary: rgba(0, 0, 0, 1),
+  hover: rgba(0, 0, 0, 0.6),
+  active: rgba(0, 0, 0, 0.3)
+);
+
+$icon-colors: (
+  primary: rgba(0, 0, 0, 0.2),
+  hover: rgba(99, 209, 187, 1),
+  active: rgba(99, 209, 187, 0.3)
+);
+
+//на удаление
+$mobile-padding-r: 30px;
+$mobile-padding-l: 30px;
+$tablet-padding-r: 50px;
+$tablet-padding-l: 50px;
+$desktop-padding-r: 50px;
+$desktop-padding-l: 50px;
+$auto-center: 0 auto;

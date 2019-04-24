@@ -1,0 +1,14 @@
+.cart-link {
+  position: relative;
+}
+
+.cart-link__icon {
+  @include y-center;
+  left: 0;
+  width: 21px;
+  height: 18px;
+
+  @include bp ($tablet-width) {
+    left: 32px;
+  }
+}

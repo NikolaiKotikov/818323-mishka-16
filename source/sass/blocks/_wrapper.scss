@@ -1,0 +1,14 @@
+.wrapper {
+  width: $mobile-width;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @include bp($tablet-width) {
+    width: $tablet-width;
+    padding: 0 50px;
+  }
+
+  @include bp($desktop-width) {
+    width: $desktop-width;
+  }
+}
