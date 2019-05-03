@@ -1,0 +1,34 @@
+.catalog {
+  list-style: none;
+
+  @include bp($desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      width: 316px;
+      height: 0;
+    }
+  }
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+
+  @include bp($tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.catalog__product {
+  @include bp($tablet-width) {
+    display: flex;
+  }
+
+  @include bp($desktop-width) {
+    width: 316px;
+    flex-direction: column;
+  }
+}

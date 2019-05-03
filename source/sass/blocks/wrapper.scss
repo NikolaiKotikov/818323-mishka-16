@@ -12,3 +12,11 @@
     width: $desktop-width;
   }
 }
+
+.wrapper--headline {
+  padding: 0;
+
+  @include bp($tablet-width) {
+    padding: 0 50px;
+  }
+}

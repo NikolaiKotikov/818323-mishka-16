@@ -7,6 +7,10 @@
 }
 
 .header__link {
+  @include link-state($link-colors);
+
+  text-decoration: none;
+  width: 100%;
   padding-top: 27px;
   padding-left: 45px;
   font-weight: 700;
@@ -49,7 +53,8 @@
     left: -30px;
     bottom: -1px;
     height: 1px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgba(236, 236, 236, 1);
+    z-index: 100;
 
     @include bp($tablet-width) {
       height: 0;
@@ -87,7 +92,7 @@
   &--form {
     @include bp($tablet-width) {
       width: 83px;
-      box-shadow: 1px 0 0 rgb(236, 236, 236), inset 1px 0 0 rgb(236, 236, 236);
+      box-shadow: 1px 0 0 rgba(236, 236, 236, 1), inset 1px 0 0 rgb(236, 236, 236);
     }
   }
 
@@ -120,7 +125,7 @@
 }
 
 .header__logo {
-  margin: auto;
+  margin: 22px auto auto auto;
 
   &:hover,
   &:focus {
@@ -137,25 +142,28 @@
 
   @include bp($desktop-width) {
     margin: auto;
+    margin-top: 8px;
   }
 }
 
 .header__logo-image {
-  width: 85px;
-  height: 35px;
+  width: 85.589px;
+  height: 35.034px;
 
   @include bp($tablet-width) {
-    width: 113px;
-    height: 46px;
+    width: 112.389px;
+    height: 46.087px;
   }
 
   @include bp($desktop-width) {
-    width: 149px;
-    height: 72px;
+    width: 148.051px;
+    height: 72.707px;
   }
 }
 
 .header__list {
+  @include list-reset;
+
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -182,7 +190,8 @@
         width: $desktop-width;
         left: -50px;
         bottom: -1px;
-        background-color: rgb(236, 236, 236);
+        background-color: rgba(236, 236, 236, 1);
+        z-index: 100;
       }
     }
   }
@@ -221,11 +230,36 @@
 .header__promo {
   display: none;
 
+  @include list-reset;
+
   @include bp($tablet-width) {
+    position: relative;
     display: flex;
     flex-grow: 1;
     flex-basis: 330px;
     justify-content: flex-end;
+
+    @include pseudo("after") {
+      top: 0;
+      right: -50px;
+      height: 100%;
+      width: $tablet-width;
+      background-color: rgba(251, 251, 251, 1);
+      background-image: url("../img/background-grey.png");
+      background-size: 100%;
+      background-repeat: repeat-x;
+      z-index: -1;
+    }
+  }
+
+  @include bp($desktop-width) {
+    &::after {
+      width: $desktop-width;
+    }
+  }
+
+  &--dark::after {
+    background: rgba(241, 241, 241, 1);
   }
 }
 

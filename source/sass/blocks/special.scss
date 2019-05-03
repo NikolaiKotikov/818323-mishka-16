@@ -1,0 +1,150 @@
+.special {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+
+  @include bp($tablet-width) {
+    padding-bottom: 20px;
+    background-image: url("../img/triple-set-tablet@1x.jpg");
+    background-position: 384px 154px;
+    background-repeat: no-repeat;
+  }
+
+  @include bp($desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 30px;
+    background-image: url("../img/triple-set-desktop@1x.jpg");
+    background-position: 575px 73px;
+  }
+}
+
+.special__title-wrapper {
+  display: flex;
+  min-height: 82px;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  @include bp($tablet-width) {
+    min-height: 146px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include bp($desktop-width) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    min-height: 152px;
+  }
+}
+
+.special__title {
+  &--main {
+    @include bp($tablet-width) {
+      &::first-letter {
+        margin-left: -0.07em;
+      }
+    }
+  }
+
+  &--promo {
+    padding-top: 5px;
+
+    @include bp($tablet-width) {
+      text-align: center;
+      line-height: 17px;
+      width: 126px;
+    }
+
+    @include bp($desktop-width) {
+      margin-right: 30px;
+      margin-left: 19px;
+    }
+  }
+}
+
+.special__content-wrapper {
+  margin-bottom: 32px;
+
+  @include bp($tablet-width) {
+    width: 290px;
+    margin-bottom: 49px;
+  }
+
+  @include bp($desktop-width) {
+    width: 467px;
+    padding-left: 175px;
+    margin-bottom: 66px;
+  }
+}
+
+.special__text {
+  margin: 0;
+  padding-top: 23px;
+  padding-bottom: 5px;
+  min-height: 112px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @include bp($tablet-width) {
+    padding-top: 0;
+    font-size: 17px;
+    line-height: 30px;
+    min-height: 125px;
+  }
+
+  @include bp($desktop-width) {
+    min-height: 140px;
+  }
+}
+
+.special__table {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 367px;
+  position: relative;
+
+  @include pseudo("after") {
+    width: 260px;
+    height: 315px;
+    background-image: url("../img/triple-set-mobile@1x.jpg");
+    bottom: -343px;
+
+    @include bp($tablet-width) {
+      background: none;
+      display: none;
+    }
+  }
+
+  @include bp($tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @include bp($desktop-width) {
+    margin-bottom: 109px;
+  }
+}
+
+.special__image {
+  margin-bottom: 21px;
+
+  @include bp($tablet-width) {
+    display: none;
+  }
+}
+
+.special__price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 26px;
+
+  @include bp($tablet-width) {
+    font-size: 20px;
+    margin-bottom: 33px;
+  }
+}
