@@ -6,6 +6,8 @@
   @include bp($tablet-width) {
     padding-bottom: 20px;
     background-image: url("../img/triple-set-tablet@1x.jpg");
+
+    @include retina("../img/triple-set-tablet@2x.jpg", 333px);
     background-position: 384px 154px;
     background-repeat: no-repeat;
   }
@@ -14,6 +16,8 @@
     padding-top: 78px;
     padding-bottom: 30px;
     background-image: url("../img/triple-set-desktop@1x.jpg");
+
+    @include retina("../img/triple-set-desktop@2x.jpg", 525px);
     background-position: 575px 73px;
   }
 }
@@ -103,20 +107,7 @@
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  margin-bottom: 367px;
-  position: relative;
-
-  @include pseudo("after") {
-    width: 260px;
-    height: 315px;
-    background-image: url("../img/triple-set-mobile@1x.jpg");
-    bottom: -343px;
-
-    @include bp($tablet-width) {
-      background: none;
-      display: none;
-    }
-  }
+  margin-bottom: 28px;
 
   @include bp($tablet-width) {
     margin-bottom: 57px;

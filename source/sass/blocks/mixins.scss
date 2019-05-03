@@ -70,6 +70,7 @@
   }
 }
 
+//добавление псевдо-элемента
 @mixin pseudo ($option) {
   &::#{$option} {
     position: absolute;
@@ -79,28 +80,10 @@
   }
 }
 
-//на удаление
-@mixin link-reset {
-  text-decoration: none;
-}
-
-@mixin mobile-wrapper {
-  width: $mobile-width - $mobile-padding-l - $mobile-padding-r;
-  padding-left: $mobile-padding-l;
-  padding-right: $mobile-padding-r;
-  margin: $auto-center;
-}
-
-@mixin tablet-wrapper {
-  width: $tablet-width - $tablet-padding-l - $tablet-padding-r;
-  padding-left: $tablet-padding-l;
-  padding-right: $tablet-padding-r;
-  margin: $auto-center;
-}
-
-@mixin desktop-wrapper {
-  width: $desktop-width - $desktop-padding-l - $desktop-padding-r;
-  padding-left: $desktop-padding-l;
-  padding-right: $desktop-padding-r;
-  margin: $auto-center;
+//ретинизация
+@mixin retina($bg-image, $width, $height: auto) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("#{$bg-image}");
+    background-size: $width $height;
+  }
 }
