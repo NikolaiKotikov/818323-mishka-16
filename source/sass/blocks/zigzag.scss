@@ -1,0 +1,57 @@
+.zigzag {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    background-repeat: repeat-x;
+  }
+
+  &--fill::after {
+    content: "";
+    background-image: url("../img/bg-zigzag-fill.svg");
+
+    @include bp($tablet-width) {
+      height: 10px;
+      background-size: 100%;
+    }
+
+    @include bp($desktop-width) {
+      height: 16px;
+      background-position: center 0;
+      background-size: 110%;
+    }
+  }
+
+  &--line::after {
+    content: "";
+    background-image: url("../img/bg-zigzag-line.svg");
+    height: 10px;
+    background-position: -9px bottom;
+    background-size: 320px 7px;
+
+    @include bp($tablet-width) {
+      height: 20px;
+      background-size: 772px 17px;
+      background-position: -21px bottom;
+    }
+
+    @include bp($desktop-width) {
+      height: 30px;
+      background-size: 1050px 23px;
+      background-position: -29px bottom;
+      background-clip: content-box;
+      padding: 0 50px;
+    }
+  }
+
+  &--catalog::after {
+    @include bp($desktop-width) {
+      height: 34px;
+      background-size: 100%;
+    }
+  }
+}

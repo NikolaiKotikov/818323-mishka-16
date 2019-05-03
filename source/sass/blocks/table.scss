@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__row {
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.table__data {
+  height: 40px;
+  vertical-align: middle;
+  text-align: left;
+
+  @include bp($desktop-width) {
+    padding-bottom: 5px;
+  }
+
+  &--info {
+    width: 163px;
+    letter-spacing: -0.47px;
+
+    @include bp($tablet-width) {
+      width: 196px;
+    }
+  }
+}

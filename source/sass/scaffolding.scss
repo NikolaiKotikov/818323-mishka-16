@@ -1,8 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  min-width: 320px;
+  width: 100%;
   font-style: normal;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: #444444;
+  color: rgb(68, 68, 68);
 
   @include indent-reset;
 }
@@ -10,4 +20,17 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

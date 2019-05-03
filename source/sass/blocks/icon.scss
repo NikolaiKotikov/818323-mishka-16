@@ -1,0 +1,8 @@
+.icon {
+  @include icon-state($icon-colors, ".icon__fill");
+  cursor: pointer;
+}
+
+.icon--footer {
+  @include icon-state($footer-colors, ".icon__fill");
+}

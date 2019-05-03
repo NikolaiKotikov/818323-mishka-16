@@ -1,0 +1,123 @@
+.about-us {
+  padding-top: 27px;
+
+  @include bp($tablet-width) {
+    padding-top: 49px;
+  }
+
+  @include bp($desktop-width) {
+    padding-left: 225px;
+    padding-top: 59px;
+  }
+}
+
+.about-us__title {
+  &::first-letter {
+    margin-left: -0.08em;
+  }
+}
+
+.about-us__list {
+  @include list-reset;
+  padding-top: 3px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @include bp($tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include bp($desktop-width) {
+    width: 700px;
+  }
+}
+
+.about-us__item {
+  position: relative;
+  padding-top: 83px;
+
+  &--row-1 {
+    order: 1;
+  }
+
+  &--row-2 {
+    order: 2;
+  }
+
+  &--row-3 {
+    order: 3;
+  }
+
+  @include bp($tablet-width) {
+    width: 50%;
+    padding-top: 100px;
+    padding-right: 20px;
+    margin-bottom: 11px;
+  }
+}
+
+.about-us__icon {
+  position: absolute;
+  fill: rgb(99, 209, 187);
+
+  &--flower {
+    top: 29px;
+    left: 8px;
+
+    @include bp($tablet-width) {
+      top: 46px;
+      left: 9px;
+    }
+  }
+
+  &--money {
+    top: 30px;
+    left: 0;
+
+    @include bp($tablet-width) {
+      left: 1px;
+      top: 47px;
+    }
+  }
+
+  &--heart {
+    top: 35px;
+    left: 8px;
+
+    @include bp ($tablet-width) {
+      top: 52px;
+    }
+  }
+
+  &--ball {
+    left: 3px;
+    top: 32px;
+
+    @include bp($tablet-width) {
+      top: 49px;
+    }
+  }
+
+  &--rocket {
+    top: 33px;
+    left: -6px;
+
+    @include bp($tablet-width) {
+      top: 50px;
+    }
+  }
+
+  &--gift {
+    top: 31px;
+    left: 3px;
+
+    @include bp($tablet-width) {
+      top: 48px;
+    }
+  }
+}

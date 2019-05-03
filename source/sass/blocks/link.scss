@@ -1,0 +1,5 @@
+.link {
+  @include link-state($link-colors);
+
+  text-decoration: none;
+}

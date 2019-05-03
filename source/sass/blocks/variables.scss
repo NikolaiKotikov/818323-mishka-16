@@ -1,0 +1,33 @@
+//точки перестроения
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+
+//ретина
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//цвета
+$link-colors: (
+  primary: rgba(0, 0, 0, 1),
+  hover: rgba(0, 0, 0, 0.6),
+  active: rgba(0, 0, 0, 0.3)
+);
+
+$icon-colors: (
+  primary: rgba(0, 0, 0, 0.2),
+  hover: rgba(99, 209, 187, 1),
+  active: rgba(99, 209, 187, 0.3)
+);
+
+$headline-icon-colors: (
+  primary: rgba(20, 144, 128, 0.5),
+  hover: rgba(20, 144, 128, 0.7),
+  active: rgba(20, 144, 128, 0.3)
+);
+
+$footer-colors: (
+  primary: rgba(0, 0, 0, 1),
+  hover: rgba(70, 193, 174, 1),
+  active: rgba(70, 193, 174, 0.3)
+);
