@@ -88,9 +88,12 @@
         <article class="catalog__product product">
           <a class="product__link  product__link--image" href="#">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-              <img class="product__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Изображение зайчика">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+              <img class="product__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
+                alt="Изображение зайчика">
             </picture>
           </a>
           <div class="product__inner">
@@ -104,7 +107,7 @@
               1 200 руб.
               <a href="order-form.html">
                 <span class="visually-hidden">В корзину</span>
-                <svg class="icon" version="1.1"  xmlns="http://www.w3.org/2000/svg"
+                <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px"
                   viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
                   xml:space="preserve">
@@ -120,9 +123,12 @@
         <article class="catalog__product product">
           <a class="product__link  product__link--image" href="#">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-              <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Изображение корзинки для белья">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+              <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
+                alt="Изображение корзинки для белья">
             </picture>
           </a>
           <div class="product__inner">
@@ -152,9 +158,12 @@
         <article class="catalog__product product">
           <a class="product__link  product__link--image" href="#">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-              <img class="product__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Изображение корзинки для игрушек">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+              <img class="product__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
+                alt="Изображение корзинки для игрушек">
             </picture>
           </a>
           <div class="product__inner">
@@ -181,21 +190,26 @@
         </article>
       </li>
     </ul>
-
-    <!--     <section class="manufacturing">
-      <h2 class="manufacturing__title">Процесс производства</h2>
+    <section class="manufacturing wrapper">
+      <h2 class="manufacturing__title title title--small">Процесс производства</h2>
       <div class="manufacturing__video video">
         <a class="video__link" href="#">
-          <img class="video__cover" src="http://placehold.it/150x100" width="150" height="100"
-            alt="Здесь будет видео, но это неточно">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video__cover" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+              alt="Здесь будет видео, но это неточно">
+          </picture>
         </a>
-        <button class="video__button" type="button" aria-label="Запустить видео"></button>
+        <button class="video__button" type="button" aria-label="Запустить видео">
+          <img src="img/icon-play.svg" width="101" height="77" alt="Запустить видео">
+        </button>
       </div>
       <p class="manufacturing__text">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        <a class="manufacturing__button visual-button" href="form.html">Сделать заказ</a>
       </p>
-      <a class="video__button button" href="form.html">Сделать заказ</a>
-    </section> -->
+    </section>
   </main>
 
   <footer class="footer wrapper">

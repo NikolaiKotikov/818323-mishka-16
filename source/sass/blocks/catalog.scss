@@ -1,10 +1,12 @@
 .catalog {
   list-style: none;
+  margin-bottom: 31px;
 
   @include bp($desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 3px;
 
     &::after {
       content: "";
