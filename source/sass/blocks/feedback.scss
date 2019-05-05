@@ -1,0 +1,109 @@
+.feedback {
+  padding-bottom: 10px;
+  margin-bottom: 34px;
+
+  @include bp($tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 79px;
+    padding-bottom: 20px;
+    margin-bottom: 37px;
+    background-image: url("../img/review@1x.jpg");
+
+    @include retina("../img/review@2x.jpg", 350px);
+    background-repeat: no-repeat;
+  }
+
+  @include bp($desktop-width) {
+    padding-bottom: 30px;
+    padding-left: 226px;
+    background-position-x: 50px;
+    margin-bottom: 71px;
+  }
+}
+
+.feedback__title {
+  margin-bottom: 24px;
+
+  @include bp($tablet-width) {
+    order: -2;
+    width: 490px;
+  }
+
+  @include bp($desktop-width) {
+    margin-top: -8px;
+  }
+}
+
+.feedback__text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  padding-bottom: 26px;
+
+  @include bp($tablet-width) {
+    width: 100%;
+    font-size: 17px;
+    min-height: 177px;
+  }
+
+  @include bp($desktop-width) {
+    width: 770px;
+    min-height: 128px;
+  }
+}
+
+.feedback__author {
+  display: block;
+  margin-bottom: 29px;
+
+  @include bp($tablet-width) {
+    width: 490px;
+  }
+}
+
+.feedback__name {
+  margin-bottom: 3px;
+  display: block;
+
+  @include bp($tablet-width) {
+    font-size: 18px;
+  }
+
+  @include bp($desktop-width) {
+    font-size: 17px;
+  }
+}
+
+.feedback__mail {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 17px;
+}
+
+.feedback__rewind {
+  margin-bottom: 38px;
+
+  @include bp($tablet-width) {
+    margin-bottom: 112px;
+  }
+
+  @include bp($desktop-width) {
+    margin-bottom: 156px;
+  }
+}
+
+.feedback__button {
+  margin-bottom: 42px;
+  font-size: 18px;
+
+  @include bp($tablet-width) {
+    order: -1;
+    width: 175px;
+    margin-bottom: 45px;
+    font-size: 17px;
+  }
+}

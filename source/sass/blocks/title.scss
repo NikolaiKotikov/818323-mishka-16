@@ -2,6 +2,7 @@
   font-weight: 700;
   line-height: 30px;
   font-size: 27px;
+  font-style: normal;
   color: rgba(0, 0, 0, 1);
 
   @include indent-reset;
@@ -9,6 +10,16 @@
   &--medium {
     font-size: 25px;
     line-height: 30px;
+
+    @include bp($tablet-width) {
+      &::first-letter {
+        margin-left: -0.08em;
+      }
+    }
+  }
+
+  &--contacts {
+    font-size: 18px;
   }
 
   @include bp($tablet-width) {

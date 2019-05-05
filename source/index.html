@@ -148,8 +148,8 @@
         </table>
         <picture>
           <source media="(min-width: 768px)" srcset="not-any-image">
-          <img class="special__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315"
-            alt="Изображение вязаных корзинок">
+          <img class="special__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+            width="260" height="315" alt="Изображение вязаных корзинок">
         </picture>
         <p class="special__price">Цена: 990 руб.</p>
         <a class="special__button visual-button" href="order-form.html">Заказать</a>
@@ -245,45 +245,61 @@
         </li>
       </ul>
     </section>
-    <!--
-    <section class="feedback">
-      <h2 class="feedback__title">Отзывы</h2>
+
+    <section class="feedback wrapper zigzag zigzag--line">
+      <h2 class="feedback__title title title--medium">Отзывы</h2>
       <blockquote class="feedback__text">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
-        инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+        инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более
         стильными, а также набирают больше лайков!
       </blockquote>
       <cite class="feedback__author">
-        <span class="feedback__name">Анастасия Красильникова</span>
+        <span class="feedback__name title title--small">Анастасия Красильникова</span>
         <span class="feedback__mail">@misssssiskras</span>
       </cite>
-      <p class="feedback__nav">
-        <a href="#" class="feedback__prev">Назад</a>
-        <a href="#" class="feedback__next">Вперед</a>
-      </p>
-      <a class="feedback__button button" href="feedback.html">Написать</a>
+      <ul class="rewind feedback__rewind">
+        <li class="rewind__item">
+          <a class="rewind__link rewind__link--prev" href="#" aria-label="Предыдущий отзыв">Назад</a>
+        </li>
+        <li class="rewind__item">
+          <a class="rewind__link rewind__link--next" href="#" aria-label="Следующий отзыв">Вперед</a>
+        </li>
+      </ul>
+      <a class="feedback__button visual-button" href="feedback.html">Написать</a>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <p class="contacts__mail">
-        <span class="contacts__mail-title">e-mail:</span>
-        <a href="#" class="contacts__mail-link">info@mimimishkashop.ru</a>
-      </p>
-      <div class="contacts__adress">
-        <span class="contacts__adress-title">адрес:</span>
-        <p class="contacts__adress-text">
-          г. Санкт-Петербург,
-          ул. Большая Конюшенная,
-          д. 19/8, офис 101
-        </p>
+      <div class="wrapper contacts__wrapper">
+      <h2 class="contacts__title title title--contacts">Контакты</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          e-mail:
+          <a href="#" class="contacts__link">info@mimimishkashop.ru</a>
+        </li>
+        <li class="contacts__item">
+          адрес:
+          <p class="contacts__text">
+            г. Санкт-Петербург,<br>
+            ул. Большая<br  class="contacts__break">
+            Конюшенная,<br>
+            д. 19/8, офис 101
+          </p>
+        </li>
+      </ul>
+    </div>
+      <div class="contacts__map wrapper">
+          <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.217665005464!2d30.320615367706296!3d59.93863276939259!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sus!4v1557067094574!5m2!1sru!2sus" frameborder="0" allowfullscreen></iframe>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Посмотреть на Google - картах">
+        </picture>
+        <svg class="contacts__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="66px" height="100.801px" viewBox="0 0 66 100.801" enable-background="new 0 0 66 100.801" xml:space="preserve">
+          <path fill="#FFFFFF" d="M56.334,9.228c-12.892-12.305-33.773-12.305-46.667,0c-12.891,12.297-12.891,32.248,0,44.542 c0,0,23.318,21.832,23.318,47.031c0-25.199,23.343-47.031,23.343-47.031C69.225,41.476,69.225,21.525,56.334,9.228z"/>
+          <path fill="#6BC6B3" d="M47.036,45.522c-0.636-3.277,0.13-6.947,0.027-10.284c-0.115-3.755-0.713-7.485-0.665-11.246 c0.039-3.044,0.545-6.173-0.503-9.091c0.065-0.332,0.134-0.662,0.195-0.995c0.271-1.463-4.577-0.689-5.338,0.649 c-0.479,0.393-0.726,0.861-0.523,1.339c0.051,0.121,0.097,0.243,0.142,0.365c-0.917,4.485-2.197,8.827-3.668,13.174 c-0.563,1.663-1.244,3.288-1.817,4.946c-0.814-1.545-1.638-3.071-2.3-4.728c-1.922-4.805-3.656-9.661-6-14.285 c0.266-2.14-4.484-1.916-5.421,0.044c-1.132,2.371-0.986,4.763-0.613,7.299c0.42,2.858,0.494,5.668,0.528,8.554 c0.066,5.566,0.502,11.119,0.584,16.684c-0.496,0.552-0.646,1.233-0.127,1.924c0.226,0.302,0.505,0.535,0.799,0.769 c1.265,1.013,4.899,0.15,4.893-1.779c-0.02-5.771-0.437-11.531-0.589-17.299c-0.015-0.565-0.025-1.129-0.034-1.694 c0.08,0.203,0.159,0.406,0.24,0.607c0.896,2.245,1.833,4.427,3.059,6.514c1.214,2.068,1.824,4.289,2.523,6.547 c-0.265,0.303-0.423,0.647-0.326,0.991c-0.055,0.251,0.099,0.409,0.352,0.504c0.894,0.766,2.578,0.383,3.513-0.01 c0.4-0.168,0.785-0.364,1.155-0.593c0.483-0.297,1.236-0.95,1.021-1.622c-0.041-0.13-0.081-0.26-0.121-0.391 c0.657-1.776,0.992-3.625,1.352-5.5c0.381-2,1.095-3.892,1.812-5.786c0.073,0.867,0.149,1.732,0.219,2.597 c0.285,3.575,0.046,7.099,0.011,10.674c-0.013,1.186,0.074,2.287,0.306,3.445c0.096,0.479,0.514,2.53,0.394,2.642 c-0.855,0.79-0.606,1.759,0.539,2.011c1.279,0.281,2.912-0.148,3.877-1.039C48.207,49.911,47.414,47.479,47.036,45.522z"/>
+        </svg>
       </div>
-      <a class="contacts__map" href="#">
-        <img class="contacts__map-image" src="http://placehold.it/150x100" width="150" height="100"
-          alt="Посмотреть на Google - картах">
-      </a>
-      <a class="contacts__button button" href="write-us.html">Напишите нам</a>
+      <a class="contacts__button visual-button  " href="write-us.html">Напишите нам</a>
     </section>
-     -->
   </main>
 
   <footer class="footer wrapper">
