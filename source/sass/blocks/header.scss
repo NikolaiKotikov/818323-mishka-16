@@ -1,4 +1,8 @@
 .header {
+  overflow: hidden;
+}
+
+.header__wrapper {
   @include bp($tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -49,9 +53,9 @@
   display: flex;
 
   @include pseudo("after") {
-    width: $mobile-width;
-    left: -30px;
-    bottom: -1px;
+    right: -50vw;
+    left: -50vw;
+    bottom: 0;
     height: 1px;
     background-color: rgba(236, 236, 236, 1);
     z-index: 100;
@@ -73,8 +77,8 @@
 
       &::after {
         height: 1px;
-        width: $tablet-width;
-        left: -50px;
+        right: -100vw;
+        left: -100vw;
 
         @include bp($desktop-width) {
           height: 0;
@@ -187,8 +191,8 @@
 
       @include pseudo("before") {
         height: 1px;
-        width: $desktop-width;
-        left: -50px;
+        right: -100vw;
+        left: -100vw;
         bottom: -1px;
         background-color: rgba(236, 236, 236, 1);
         z-index: 100;
@@ -241,13 +245,10 @@
 
     @include pseudo("after") {
       top: 0;
-      right: -50px;
+      right: -100vw;
+      left: -100vw;
       height: 100%;
-      width: $tablet-width;
-      background-color: rgba(251, 251, 251, 1);
-      background-image: url("../img/background-grey.png");
-      background-size: 100%;
-      background-repeat: repeat-x;
+      background-color: rgba(249, 249, 249, 1);
       z-index: -1;
     }
   }

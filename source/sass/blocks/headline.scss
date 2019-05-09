@@ -1,6 +1,7 @@
 .headline {
-  background-color: rgba(251, 251, 251, 1);
+  background-color: rgba(249, 249, 249, 1);
   background-image: url("../img/hero-mobile@1x.jpg");
+  overflow: hidden;
 
   @include retina("../img/hero-mobile@2x.jpg", 575px);
   background-position: center -17px;
@@ -20,7 +21,8 @@
     background-position-y: -39px;
   }
 
-  &--catalog {
+  &--catalog,
+  &--form {
     background: rgba(241, 241, 241, 1);
     padding-top: 70px;
     padding-bottom: 77px;
@@ -101,7 +103,25 @@
   min-height: 103px;
   width: 100%;
   padding-top: 25px;
-  padding-left: 30px;
+  padding-right: 90px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    top: 0;
+    left: -50vw;
+    right: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    top: 0;
+    right: -50vw;
+    left: 100%;
+  }
 
   @include icon-state($headline-icon-colors, ".headline__icon");
 
@@ -127,6 +147,11 @@
   &--light {
     background-color: rgb(99, 209, 187);
 
+    &::before,
+    &::after {
+      background-color: rgb(99, 209, 187);
+    }
+
     @include bp($tablet-width) {
       &:hover,
       &:focus,
@@ -138,6 +163,11 @@
 
   &--dark {
     background-color: rgb(86, 195, 178);
+
+    &::before,
+    &::after {
+      background-color: rgb(86, 195, 178);
+    }
 
     @include bp($tablet-width) {
       &:hover,
@@ -151,10 +181,11 @@
 
 .headline__icon {
   position: absolute;
-  right: 35px;
+  right: 6px;
   top: 23px;
   width: 40px;
   height: 62px;
+  z-index: 5;
 
   @include bp($tablet-width) {
     right: 36px;
@@ -165,7 +196,7 @@
     width: 60px;
     height: 60px;
     top: 21px;
-    right: 26px;
+    right: -3px;
 
     @include bp($tablet-width) {
       top: 31px;
