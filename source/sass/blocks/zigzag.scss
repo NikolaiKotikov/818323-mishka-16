@@ -80,10 +80,13 @@
   }
 
 
-  &--catalog::after {
+  &--catalog {
     @include bp($desktop-width) {
-      height: 34px;
-      background-size: 100%;
+      &::after,
+      &::before {
+        height: 34px;
+        background-size: 1150px;
+      }
     }
   }
 }
