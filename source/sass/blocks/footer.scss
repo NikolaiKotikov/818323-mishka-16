@@ -1,6 +1,8 @@
 .footer {
   background-color: rgba(241, 241, 241, 1);
+}
 
+.footer__wrapper {
   @include bp($tablet-width) {
     display: flex;
     justify-content: space-between;

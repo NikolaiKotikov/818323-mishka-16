@@ -1,4 +1,38 @@
 .feedback {
+  overflow: hidden;
+
+  @include bp($tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 457px;
+      left: 0;
+      right: 54.4%;
+      top: 0;
+      z-index: -1;
+      background-color: rgba(247, 247, 247, 1);
+      background-image: url("../img/review@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/review@2x.jpg")
+      }
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @include bp($desktop-width) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.feedback__wrapper {
   padding-bottom: 10px;
   margin-bottom: 34px;
 
@@ -9,17 +43,16 @@
     padding-top: 79px;
     padding-bottom: 20px;
     margin-bottom: 37px;
-    background-image: url("../img/review@1x.jpg");
-
-    @include retina("../img/review@2x.jpg", 350px);
-    background-repeat: no-repeat;
   }
 
   @include bp($desktop-width) {
     padding-bottom: 30px;
-    padding-left: 226px;
-    background-position-x: 50px;
+    padding-left: 205px;
     margin-bottom: 71px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 30px;
+    @include retina("../img/review@2x.jpg", 350px)
   }
 }
 

@@ -253,12 +253,6 @@
     }
   }
 
-  @include bp($desktop-width) {
-    &::after {
-      width: $desktop-width;
-    }
-  }
-
   &--dark::after {
     background: rgba(241, 241, 241, 1);
   }
