@@ -1,6 +1,7 @@
 .menu-button {
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 
   &--close {
     background-image: url("../img/icon-menu-close.svg");

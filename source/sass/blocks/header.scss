@@ -174,7 +174,12 @@
   width: 100%;
   font-size: 17px;
 
+  &--hidden {
+    display: none;
+  }
+
   @include bp($tablet-width) {
+    display: flex;
     flex-basis: 330px;
     flex-grow: 1;
   }
