@@ -9,12 +9,15 @@
 
   @include bp($desktop-width) {
     margin-bottom: 79px;
-    padding-left: 225px;
+    padding-left: 205px;
     padding-top: 59px;
   }
 }
 
 .about-us__list {
+  overflow-x: hidden;
+  overflow-y: hidden;
+
   @include list-reset;
   padding-top: 3px;
   color: rgb(0, 0, 0);

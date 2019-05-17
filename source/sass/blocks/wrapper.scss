@@ -4,19 +4,10 @@
   margin: 0 auto;
 
   @include bp($tablet-width) {
-    width: $tablet-width;
-    padding: 0 50px;
+    width: 728px;
   }
 
   @include bp($desktop-width) {
-    width: $desktop-width;
-  }
-}
-
-.wrapper--headline {
-  padding: 0;
-
-  @include bp($tablet-width) {
-    padding: 0 50px;
+    width: 1110px;
   }
 }

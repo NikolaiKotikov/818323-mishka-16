@@ -1,57 +1,93 @@
 .zigzag {
   position: relative;
 
-  &::after {
+  &::after,
+  &::before {
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 100%;
     z-index: 5;
     background-repeat: repeat-x;
   }
 
-  &--fill::after {
-    content: "";
-    background-image: url("../img/bg-zigzag-fill.svg");
+  &::before {
+    left: 50%;
+    right: -100vw;
+    background-position-x: left;
+  }
 
+  &::after {
+    right: 50%;
+    left: -100vw;
+    background-position-x: right;
+  }
+
+  &--fill {
     @include bp($tablet-width) {
-      height: 10px;
-      background-size: 100%;
+      &::before,
+      &::after {
+        content: "";
+        height: 10px;
+        background-size: 770px;
+        background-image: url("../img/bg-zigzag-fill.svg");
+      }
     }
 
     @include bp($desktop-width) {
-      height: 16px;
-      background-position: center 0;
-      background-size: 110%;
+      &::before,
+      &::after {
+        height: 16px;
+        background-size: 1250px;
+      }
     }
   }
 
-  &--line::after {
-    content: "";
-    background-image: url("../img/bg-zigzag-line.svg");
-    height: 10px;
-    background-position: -9px bottom;
-    background-size: 320px 7px;
+  &--line {
+    &::before,
+    &::after {
+      content: "";
+      background-image: url("../img/bg-zigzag-line.svg");
+      height: 7px;
+      background-size: 319px 7px;
 
-    @include bp($tablet-width) {
-      height: 20px;
-      background-size: 772px 17px;
-      background-position: -21px bottom;
+      @include bp($tablet-width) {
+        height: 17px;
+        background-size: 772px 17px;
+      }
+
+      @include bp($desktop-width) {
+        height: 23px;
+        background-size: 1050px 23px;
+      }
     }
 
-    @include bp($desktop-width) {
-      height: 30px;
-      background-size: 1050px 23px;
-      background-position: -29px bottom;
-      background-clip: content-box;
-      padding: 0 50px;
+    &::before {
+      left: 47%;
+
+      @include bp($desktop-width) {
+        left: 48%;
+        right: 30px;
+      }
+    }
+
+    &::after {
+      right: 53%;
+
+      @include bp($desktop-width) {
+        right: 52%;
+        left: 30px;
+      }
     }
   }
 
-  &--catalog::after {
+
+  &--catalog,
+  &--form {
     @include bp($desktop-width) {
-      height: 34px;
-      background-size: 100%;
+      &::after,
+      &::before {
+        height: 34px;
+        background-size: 1150px;
+      }
     }
   }
 }

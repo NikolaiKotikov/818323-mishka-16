@@ -6,3 +6,38 @@
 .icon--footer {
   @include icon-state($footer-colors, ".icon__fill");
 }
+
+.icon--form {
+  @include icon-state($form-colors, ".icon__fill");
+  cursor: default;
+  position: relative;
+}
+
+.icon__fill {
+  &--form {
+    position: absolute;
+    right: 38px;
+    bottom: 17px;
+
+    @include bp($tablet-width) {
+      right: 56px;
+    }
+
+    @include bp($desktop-width) {
+      right: 213px;
+    }
+  }
+
+  &--mail {
+    right: 34px;
+    bottom: 9px;
+
+    @include bp($tablet-width) {
+      right: 52px;
+    }
+
+    @include bp($desktop-width) {
+      right: 209px;
+    }
+  }
+}
