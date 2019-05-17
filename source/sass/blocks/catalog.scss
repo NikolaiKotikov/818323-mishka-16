@@ -1,8 +1,12 @@
 .catalog {
   list-style: none;
-  margin-bottom: 31px;
+  margin-bottom: 1px;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  @include bp ($tablet-width) {
+    margin-bottom: 0;
+  }
 
   @include bp($desktop-width) {
     display: flex;
