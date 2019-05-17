@@ -1,19 +1,16 @@
 .about-us {
   padding-top: 27px;
+  margin-bottom: 56px;
 
   @include bp($tablet-width) {
     padding-top: 49px;
+    margin-bottom: 72px;
   }
 
   @include bp($desktop-width) {
+    margin-bottom: 79px;
     padding-left: 225px;
     padding-top: 59px;
-  }
-}
-
-.about-us__title {
-  &::first-letter {
-    margin-left: -0.08em;
   }
 }
 

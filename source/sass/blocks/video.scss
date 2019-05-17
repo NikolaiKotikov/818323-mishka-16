@@ -1,0 +1,51 @@
+.video {
+  position: relative;
+}
+
+.video__cover,
+.video__link {
+  width: 260px;
+  height: 150px;
+
+  @include bp($tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @include bp($desktop-width) {
+    width: 682px;
+  }
+}
+
+.video__link {
+  display: block;
+}
+
+.video__button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 36px;
+  left: 79px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+
+  @include bp($tablet-width) {
+    top: 189px;
+    left: 283px;
+  }
+
+  @include bp($desktop-width) {
+    left: 291px;
+  }
+}
