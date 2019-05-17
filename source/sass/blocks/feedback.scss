@@ -1,5 +1,6 @@
 .feedback {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   @include bp($tablet-width) {
     position: relative;
@@ -16,7 +17,7 @@
       background-image: url("../img/review@1x.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/review@2x.jpg")
+        background-image: url("../img/review@2x.jpg");
       }
 
       background-repeat: no-repeat;
@@ -52,7 +53,8 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position-x: 30px;
-    @include retina("../img/review@2x.jpg", 350px)
+
+    @include retina("../img/review@2x.jpg", 350px);
   }
 }
 

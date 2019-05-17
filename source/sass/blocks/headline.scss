@@ -1,7 +1,8 @@
 .headline {
   background-color: rgba(249, 249, 249, 1);
   background-image: url("../img/hero-mobile@1x.jpg");
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   @include retina("../img/hero-mobile@2x.jpg", 575px);
   background-position: center -17px;
@@ -38,6 +39,18 @@
     @include bp($desktop-width) {
       padding-bottom: 122px;
       margin-bottom: 111px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 22px;
+
+    @include bp($tablet-width) {
+      margin-bottom: 74px;
+    }
+
+    @include bp($desktop-width) {
+      margin-bottom: 104px;
     }
   }
 }

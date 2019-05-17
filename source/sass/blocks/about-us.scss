@@ -15,6 +15,9 @@
 }
 
 .about-us__list {
+  overflow-x: hidden;
+  overflow-y: hidden;
+
   @include list-reset;
   padding-top: 3px;
   color: rgb(0, 0, 0);

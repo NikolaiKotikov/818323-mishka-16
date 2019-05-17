@@ -80,7 +80,8 @@
   }
 
 
-  &--catalog {
+  &--catalog,
+  &--form {
     @include bp($desktop-width) {
       &::after,
       &::before {

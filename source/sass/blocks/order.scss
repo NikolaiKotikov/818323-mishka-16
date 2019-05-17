@@ -1,0 +1,68 @@
+.order__intro {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 24px;
+
+  @include bp($tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 52px;
+  }
+
+  @include bp($desktop-width) {
+    padding: 0 205px;
+  }
+}
+
+.order__fieldset {
+  margin-bottom: 16px;
+
+  &--color {
+    margin-bottom: 12px;
+
+    @include bp($tablet-width) {
+      margin-bottom: 16px;
+      background-color: rgb(241, 241, 241);
+    }
+  }
+
+  &--contacts {
+    margin-bottom: 0;
+    padding-bottom: 32px;
+
+    @include bp($tablet-width) {
+      background-color: rgb(241, 241, 241);
+      padding-bottom: 33px;
+    }
+  }
+
+  &--phone {
+    @include bp($tablet-width) {
+      padding-top: 59px;
+    }
+  }
+
+  &--personal {
+    margin-bottom: 9px;
+
+    @include bp($tablet-width) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &--mail {
+    @include bp($tablet-width) {
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &--wish {
+    padding-bottom: 39px;
+
+    @include bp($tablet-width) {
+      padding-bottom: 16px;
+    }
+  }
+}
