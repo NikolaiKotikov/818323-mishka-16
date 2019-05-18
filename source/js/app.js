@@ -43,4 +43,3 @@ window.addEventListener("keydown", function (evt) {
     bg.classList.add("page__background--hidden");
   }
 });
-
