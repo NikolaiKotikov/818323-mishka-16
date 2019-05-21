@@ -7,7 +7,7 @@ var bg = document.querySelector(".page__background");
 
 headerListSite.classList.add("header__list--hidden");
 headerListUser.classList.add("header__list--hidden");
-navButtonState.classList.remove('menu-button--nojs');
+navButtonState.classList.remove("menu-button--nojs");
 navButtonState.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (navButtonState.classList.contains("menu-button--close")) {
