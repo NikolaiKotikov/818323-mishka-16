@@ -402,6 +402,17 @@
   &:focus ~ .fieldset__label::before {
     border: 2px solid rgb(98, 209, 186);
   }
+
+  &:disabled + .fieldset__label::after,
+  &:disabled + .fieldset__label::before,
+  &:disabled + .fieldset__label {
+    opacity: 0.3;
+  }
+
+  &:disabled + .fieldset__label::before {
+    border: 2px solid rgba(68, 68, 68, 1);
+  }
+
 }
 
 .fieldset__input {
